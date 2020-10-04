@@ -30,7 +30,10 @@ framework can be used (Bootstrap, Material, etc.), and a ready-made template is 
 </ul>
 
 <h4>Below is the mockup for creating (and editing) a ticket:</h4> 
-<img href = "Mockup.png"></img>
+<p align="center">
+  <img src=<img href = "Mockup.png"></img>
+ width="350" title="hover text">
+</p>
 /*![Mockup](Mockup.png)*/
 
 <h4>Please make sure that the submitted assignment:</h4>
