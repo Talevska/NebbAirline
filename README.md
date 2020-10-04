@@ -1,5 +1,5 @@
-# NebbAirline
- Airline Booking System
+<h1># NebbAirline</h1>
+<h2>Airline Booking System</h2>
 
 Nebb Coding Project
 
