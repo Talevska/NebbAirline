@@ -31,8 +31,7 @@ framework can be used (Bootstrap, Material, etc.), and a ready-made template is 
 
 <h4>Below is the mockup for creating (and editing) a ticket:</h4> 
 <p align="center">
-  <img src=<img href = "Mockup.png"></img>
- width="350" title="hover text">
+  <img src="Mockup.png" width="350" title="Nebb Airline Booking System Mockup"></img>
 </p>
 /*![Mockup](Mockup.png)*/
 
