@@ -22,25 +22,25 @@ framework can be used (Bootstrap, Material, etc.), and a ready-made template is 
 The
 application should provide a user interface for the following use cases:
 
-• List all flights;
-• When a flight is clicked list flight information and all of the passengers for the flight (from the
+â€¢ List all flights;
+â€¢ When a flight is clicked list flight information and all of the passengers for the flight (from the
 submitted airline tickets);
-• Add an airline ticket;
-• Edit an airline ticket;
-• Delete airline tickets.
+â€¢ Add an airline ticket;
+â€¢ Edit an airline ticket;
+â€¢ Delete airline tickets.
 
 Below is the mockup for creating (and editing) a ticket: 
-![Mockup]( ../NebbAirline/Mockup.png)
+![Mockup](Mockup.png)
 
 
 
 Please make sure that the submitted assignment:
 
-• Compiles and runs from Visual Studio;
-• Handles any invalid input appropriately;
-• Use Passport # for identifying passengers;
-• Use Flight Code for identifying flights;
-• When an existing value is inserted in the Passport # textbox prepopulate the empty fields with
+â€¢ Compiles and runs from Visual Studio;
+â€¢ Handles any invalid input appropriately;
+â€¢ Use Passport # for identifying passengers;
+â€¢ Use Flight Code for identifying flights;
+â€¢ When an existing value is inserted in the Passport # textbox prepopulate the empty fields with
 the values for the existing passenger;
-• When an existing value is inserted in the Flight Code textbox prepopulate the empty fields with
+â€¢ When an existing value is inserted in the Flight Code textbox prepopulate the empty fields with
 the values for the existing flight.
