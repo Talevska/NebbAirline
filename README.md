@@ -33,7 +33,6 @@ framework can be used (Bootstrap, Material, etc.), and a ready-made template is 
 <p align="center">
   <img src="Mockup.png" width="350" title="Nebb Airline Booking System Mockup"></img>
 </p>
-/*![Mockup](Mockup.png)*/
 
 <h4>Please make sure that the submitted assignment:</h4>
 <ul>
@@ -41,8 +40,9 @@ framework can be used (Bootstrap, Material, etc.), and a ready-made template is 
   <li>Handles any invalid input appropriately</li>
   <li>Use Passport # for identifying passengers</li>
   <li>Use Flight Code for identifying flights</li>
-  <li>When an existing value is inserted in the Passport # textbox prepopulate the empty fields with
-the values for the existing passenger</li>
-  <li>When an existing value is inserted in the Flight Code textbox prepopulate the empty fields with
-the values for the existing flight</li>
+  <li>When an existing value is inserted in the Passport # textbox prepopulate the empty fields with the values for the existing passenger</li>
+  <li>When an existing value is inserted in the Flight Code textbox prepopulate the empty fields with the values for the existing flight</li>
 </ul>
+</br>
+</br>
+</br>
