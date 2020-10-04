@@ -30,7 +30,7 @@ submitted airline tickets);
 • Delete airline tickets.
 
 Below is the mockup for creating (and editing) a ticket: 
-![Optional Text]( ../NebbAirline/Mockup.png)
+![Mockup]( ../NebbAirline/Mockup.png)
 
 
 
