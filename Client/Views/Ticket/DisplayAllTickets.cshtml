@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Client.Models.Ticket>
+@{
+    ViewData["Title"] = "Tickets";
+}
+
+<div class="page-header">@ViewBag.Message</div>
+<div class="row tickets">
+    @foreach (var item in Model)
+    {
+        @await Component.InvokeAsync("Ticket", item)
+    }
+</div>

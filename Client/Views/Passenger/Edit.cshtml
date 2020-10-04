@@ -1,0 +1,52 @@
+﻿@model Client.Models.Passenger
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="page-header">@ViewBag.Message</div>
+<div class="row">
+    <div class="create-passenger-container col-xs-12 col-sm-12">
+        <form method="post" enctype="multipart/form-data" asp-action="Edit" asp-controller="Passenger">
+            <div class="form-header">
+                <img src="~/images/nebb.png" />
+                <span>Nebb Airline Edit Passenger</span>
+            </div>
+            <div class="top-info">
+                <input type="hidden" asp-for="PassengerID" />
+                <div class="form-group">
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName" />
+
+                    <label asp-for="DateBirth"></label>
+                    <input asp-for="DateBirth" />
+
+                    <div class="validation-container">
+                        <span></span>
+                        <span asp-validation-for="FirstName"></span>
+                        <span></span>
+                        <span asp-validation-for="DateBirth"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName" />
+
+                    <label asp-for="Passport"></label>
+                    <input asp-for="Passport" />
+
+                    <div class="validation-container">
+                        <span></span>
+                        <span asp-validation-for="LastName"></span>
+                        <span></span>
+                        <span asp-validation-for="Passport"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="passenger-buttons">
+                <input type="submit" value="Edit" id="submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+﻿@model Client.Models.Passenger
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="page-header">Are you sure you want to delete passenger?</div>
+
+<div class="row passenger-info-container">
+    <div class="col-sm-12 col-xs-12 col-md-12 first">
+        <span>Passenger Info</span>
+    </div>
+    <div class="col-sm-6 col-xs-6 left-info">
+        <div class="passenger-info">Passenger ID</div>
+        <div class="passenger-info">First Name</div>
+        <div class="passenger-info">Last Name</div>
+        <div class="passenger-info">Date of birth</div>
+        <div class="passenger-info">Passport #</div>
+    </div>
+    <div class="col-sm-6 col-xs-6 right-info">
+        <div class="passenger-info">@Model.PassengerID</div>
+        <div class="passenger-info">@Model.FirstName</div>
+        <div class="passenger-info">@Model.LastName</div>
+        <div class="passenger-info">@Model.DateBirth.Day.@Model.DateBirth.Month.@Model.DateBirth.Year</div>
+        <div class="passenger-info">@Model.Passport</div>
+    </div>
+
+    <div class="delete-form">
+        <form method="post" enctype="multipart/form-data" asp-action="Delete" asp-controller="Passenger">
+            <input type="hidden" asp-for="PassengerID" />
+            <input id="yes-delete" class="btn btn-danger" type="submit" value="Yes" />
+            <button id="no-delete" type="button" class="btn btn-success">
+                @Html.ActionLink("No", "PassengerInfo", "Passenger", Model)
+            </button>
+        </form>
+    </div>
+</div>

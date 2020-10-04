@@ -1,0 +1,820 @@
+﻿body {
+    background: white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    background-image: url('../images/airplane-png-1.png'), url('../images/airplane-png-2.png');
+    background-repeat: no-repeat;
+    background-position-y: 10vh;
+    background-position-x: 0vw, 80vw;
+    background-size: 20%;
+}
+
+/*Navigation*/
+.navbar-inverse {
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%,  #09203f 74%);
+    border: none;
+    height: 10%;
+}
+
+.menu-container {
+    width: 100%;
+    height: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+    .nav a {
+        font-family: 'Merriweather', serif !important;
+        color: white !important;
+        letter-spacing: 2px;
+        padding: 16px;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1000;
+    }
+
+ul li:last-child a {
+    border: none;
+}
+
+.nav-ul li:last-of-type {
+    background-color: rgba(255, 0, 0, 0.9);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+.nav a:hover {
+    color: white;
+}
+
+.nav a li {
+    position: relative;
+}
+
+.navbar-inverse .navbar-toggle {
+    border: none;
+}
+
+    .navbar-inverse .navbar-toggle .icon-bar {
+        background-color: white;
+    }
+
+.navbar-header img {
+    margin-top: 0.6vw;
+    width: 15vw;
+    height: 6vh;
+}
+
+.navbar-collapse {
+    box-shadow: none;
+    border: none;
+    float: right;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle:focus {
+    background: transparent;
+}
+
+.navbar-inverse .navbar-toggle:active {
+    background: transparent;
+}
+
+.hover {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(230, 236, 255, 0.6);
+    z-index: 0;
+    opacity: 0;
+}
+
+/*.hover:last-of-type {
+    border-radius: 25px;
+}*/
+
+@media (max-width: 767px) {
+    .nav {
+        padding-bottom: 20px;
+    }
+
+        .nav a {
+            padding: 12px;
+            border: none;
+        }
+
+    .collapse {
+        width: 20%;
+    }
+
+    .navbar-header {
+        margin: auto 0;
+    }
+
+    .navbar-collapse, .collapse {
+        box-shadow: none;
+        border: none;
+        float: right;
+        background-color: #09203f;
+        color: white;
+    }
+
+    .flight-container {
+        width: 90%;
+        margin: 5%;
+    }
+
+    .ticket-container {
+        width: 70%;
+        margin: 15%;
+    }
+
+    .body-content {
+        width: auto;
+        margin: 5%;
+    }
+
+    .ticket-container .name-for {
+        display: inline-block;
+        padding-top: 1%;
+        font-size: 2vw;
+        width: 20%;
+        height: auto;
+    }
+
+    .ticket-container .name {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 2vw;
+        width: 20%;
+        height: auto;
+        margin-right: 5%;
+    }
+
+    .ticket-container .bags-name-for {
+        display: inline-block;
+        font-size: 1.8vw;
+        width: 26%;
+        height: auto;
+        padding-top: 0.5%;
+    }
+
+    .ticket-container .bags-name {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 2vw;
+        width: 5%;
+        height: auto;
+        padding-top: 0.5%;
+    }
+
+    .ticket-container .flg-info, .ticket-container .psg-info {
+        font-style: italic;
+        color: darkblue;
+        font-size: 3vw;
+    }
+
+    .ticket-container .flg-info, .ticket-container .psg-info {
+        font-style: italic;
+        color: darkblue;
+        font-size: 2vw;
+    }
+
+    .ticket-container .code-name {
+        float: right;
+        width: 24%;
+        font-weight: bold;
+        font-size: 2vw;
+    }
+
+    .ticket-container .code-name-for {
+        float: right;
+        width: 24%;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        padding-bottom: 20px;
+    }
+
+    .navbar-header {
+        margin: auto 0;
+    }
+}
+
+@media (max-width: 2400px) {
+    .navbar-header {
+        float: left;
+        width: 10%;
+        margin-top: 0.5%;
+    }
+}
+
+@media (min-width: 767px) {
+    .flight-container {
+        width: 49%;
+        margin-left: 0.6%;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+
+    .ticket-container {
+        width: 48%;
+        margin: 2% 1% 1% 1%;
+    }
+
+        .ticket-container .name-for {
+            display: inline-block;
+            padding-top: 1%;
+            font-size: 1vw;
+            width: 20%;
+        }
+
+        .ticket-container .name {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 1.2vw;
+            width: 20%;
+            margin-right: 5%;
+        }
+
+        .ticket-container .bags-name-for {
+            display: inline-block;
+            font-size: 0.9vw;
+            width: 26%;
+            padding-top: 0.5%;
+        }
+
+        .ticket-container .bags-name {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 1vw;
+            width: 5%;
+            padding-top: 0.5%;
+        }
+
+        .ticket-container .flg-info, .ticket-container .psg-info {
+            font-style: italic;
+            color: darkblue;
+            font-size: 1vw;
+        }
+
+        .ticket-container .code-name {
+            float: right;
+            width: 24%;
+            font-weight: bold;
+            font-size: 1.4vw;
+        }
+
+        .ticket-container .code-name-for {
+            float: right;
+            width: 24%;
+            font-size: 1.2vw;
+        }
+}
+
+/*-----Header-----*/
+.page-header {
+    margin-top: 0;
+    text-align: center;
+    font-size: 2.5vw;
+    color: #09203f;
+    text-shadow: 1px 1px 2px white, 0 0 35px darkblue, 0 0 15px white;
+}
+
+/*Index*/
+.index {
+    font-family: sans-serif;
+    font-size: 3vw;
+}
+
+.index span {
+    color: #09203f;
+}
+
+.index #book-btn {
+    width: 20%;
+    margin-top: 5%;
+    font-size: 2vw;
+    border-radius: 12px;
+    background-color: rgba(255, 0, 0, 0.9);
+    border: none;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+.index #book-btn a {
+    text-decoration: none;
+    color: white;
+}
+/*------------------------------------------*/
+footer {
+    margin-top: 1%;
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+    color: white;
+    font-size: 1.8vw;
+}
+
+.body-content {
+    margin: 5% auto;
+    padding: 0;
+}
+
+.render-container {
+    margin: 5% 1%;
+}
+
+/*FlightComponent*/
+.display-label {
+    display: inline-block;
+    width: 100%;
+    font-size: 1vw;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.display-field {
+    display: inline-block;
+    width: 100%;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+.top-look {
+    background-color: #808080;
+    background-color: rgba(214, 214, 194, 1);
+    border-left: 0.5vw solid #1c384a;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    margin-top: 2%;
+}
+
+.bottom-look {
+    background-color: #808080;
+    background-color: rgba(245, 245, 240, 0.8);
+    padding: 5%;
+    border-left: 0.5vw solid #1c384a;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2%;
+}
+
+.display-label .left-span, .display-field .left-span {
+    float: left;
+    width: 35%;
+}
+
+.display-label .right-span, .display-field .right-span {
+    float: right;
+    width: 35%;
+}
+
+.display-field .icon, .display-label .icon {
+    float: left;
+    width: 28%;
+    margin: auto 1%;
+    text-align: center;
+}
+
+    .display-field .icon img, .display-label .icon img {
+        width: 10vw;
+        margin-top: -2vh;
+    }
+
+.display-field .date {
+    font-size: 1vw;
+    font-weight: normal;
+}
+
+.info-button {
+    margin-left: 30%;
+    background-color: #2a5470;
+}
+
+/*----Flight Info-----*/
+.single-flight-container {
+    margin: auto;
+    padding: 5% 20% 5% 20%;
+}
+
+.passengers {
+    margin-top: 5%;
+    font-size: 3vw;
+    width: 80%;
+    margin: auto;
+}
+
+.passenger-row {
+    font-size: 1.2vw;
+    color: black;
+    padding-left: 0;
+    padding-top: 0.6vw;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+    .passenger-row:first-of-type {
+        padding-top: 0.4vw;
+        color: white;
+        font-size: 1.6vw;
+        font-weight: 500;
+        background-color: #537895;
+        background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+    }
+
+    .passenger-row button {
+        float: right;
+        margin-top: 0;
+        margin-bottom: 0.3vw;
+        font-size: 1vw;
+    }
+
+.passengers span {
+    font-size: 2.5vw;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+/*----Passenger Info----*/
+.passenger-info-container {
+    font-size: 1.5vw;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 25%;
+    color: rgb(77, 38, 115);
+}
+
+    .passenger-info-container .left-info {
+        padding: 4vh 0 4vh 5vw;
+        margin-right: 0;
+    }
+
+    .passenger-info-container .right-info {
+        margin-left: 0;
+        padding: 4vh 5vw 4vh 0;
+        font-weight: 200;
+    }
+
+.passenger-info {
+    border-bottom: 0.1vw solid rgb(77, 38, 115);
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+}
+
+.passenger-info-container .first {
+    padding-top: 5%;
+    font-size: 2vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+.passenger-tickets {
+    margin: 5%;
+    font-size: 3vw;
+    text-align: center;
+    color: rgb(77, 38, 115);
+}
+
+/*----Ticket----*/
+.ticket-info .ticket-container {
+    width: 80%;
+    margin: auto 10%;
+}
+
+.name-dep-ret {
+    width: 70%;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.4vw;
+    margin-right: 5%;
+}
+
+.ticket-container {
+    padding: 1%;
+    background-color: white;
+    border-bottom: 2vw solid #09203f;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 2vw solid #09203f;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+    .ticket-container .header {
+        text-align: center;
+        color: #537895;
+    }
+
+        .ticket-container .header img {
+            float: left;
+            width: 12%;
+            margin-top: -1%;
+            margin-left: 2%;
+        }
+
+.ticket-top-look {
+    border: 0.1vw solid black;
+    margin: 2%;
+    padding: 1%;
+}
+
+.ticket-bottom-look {
+    border: 0.1vw solid black;
+    margin: 2%;
+    padding: 1.4%;
+}
+
+.buttons {
+    width: 30%;
+    margin: 2% 69%;
+}
+
+#edit-ticket a, #delete-ticket a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+    .buttons .btn {
+        margin-left: 2%;
+        margin-bottom: 1%;
+        font-size: 1vw;
+        width: 45%;
+        text-align: center;
+        padding: 1% 0 1% 0;
+    }
+
+/*----Ticket Booking Form*/
+.create-ticket-container {
+    width: auto;
+    margin: 2% 5%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 15px 40px 30px rgba(0, 0, 0, 0.2), 10px 20px 30px 10px rgba(0, 0, 0, 0.19);
+}
+
+.form-header img {
+    width: 15%;
+}
+
+.form-header span {
+    margin: auto 15%;
+    width: auto;
+    color: #1c384a;
+    font-size: 1.5vw;
+}
+
+.create-ticket-container .form-group label {
+    width: 20%;
+    margin: 1% 3%;
+    font-size: 1.2vw;
+}
+
+.create-ticket-container .form-group input {
+    width: 20%;
+    font-size: 1vw;
+}
+
+.create-ticket-container .baggage label {
+    margin: 1% 1% 1% 3%;
+    font-size: 1vw;
+}
+
+.create-ticket-container .baggage input {
+    width: 5%;
+}
+
+.create-ticket-container #submit, .create-ticket-container #reset {
+    float: right;
+    width: 15%;
+    margin: 2% 2%;
+}
+
+.create-ticket-container .top-info {
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-bottom: 2%;
+}
+
+.top-span {
+    font-size: 1vw;
+    padding-left: 1%;
+    color: #1c384a;
+    font-style: italic;
+}
+
+.create-ticket-container .bottom-info {
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.validation-container {
+    margin: auto 2%;
+    width: 96%;
+}
+
+    .validation-container span {
+        font-size: 0.8vw;
+        margin: 0;
+        display: inline-block;
+        width: 24%;
+        text-align: right;
+        color: red;
+    }
+
+.last-validation-container span {
+    font-size: 0.8vw;
+    margin: 0;
+    padding-right: 1%;
+    display: inline-block;
+    width: 32.5%;
+    text-align: right;
+    color: red;
+}
+
+.invalid {
+    border: 1px solid red;
+    background-color: #d9d9d9;
+}
+
+.asterix {
+    font-size: 1.5vw;
+}
+
+@media (max-width: 767px) {
+    .top-span, .form-header span {
+        font-size: 2vw;
+    }
+
+    .create-ticket-container .form-group label, .create-ticket-container .form-group input {
+        font-size: 2vw;
+    }
+
+    .create-ticket-container .baggage label {
+        margin: 1% 1% 1% 3%;
+        font-size: 1.7vw;
+    }
+
+    .asterix {
+        font-size: 2vw;
+    }
+}
+
+/*--- Confirm Delete----*/
+.delete-form {
+    float: right;
+    width: 20%;
+    margin: 1% 2%;
+}
+
+.delete-form #yes-delete, .delete-form #no-delete {
+    width: 48%;
+    text-decoration: none;
+    color: white;
+}
+
+.delete-form #no-delete a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+/*----Add Passenger----*/
+.create-passenger-container {
+    width: auto;
+    margin: 2% 15%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 15px 40px 30px rgba(0, 0, 0, 0.2), 10px 20px 30px 10px rgba(0, 0, 0, 0.19);
+}
+
+.create-passenger-container .form-group label {
+    width: 20%;
+    padding-top : 2%;
+    padding-left: 5%;
+    margin-left: 3%;
+    font-size: 1.2vw;
+}
+
+.create-passenger-container .form-group input {
+    width: 20%;
+    font-size: 1.2vw;
+}
+
+.create-passenger-container #submit, .create-passenger-container #reset {
+    width: 45%;
+    font-size: 1.2vw;
+}
+
+.create-passenger-container .passenger-buttons {
+    width: 40%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    float: right;
+}
+
+@media (max-width: 767px){
+    .create-passenger-container .form-group input {
+        width: 40%;
+        font-size: 3vw;
+    }
+
+    .create-passenger-container .form-group label {
+        width: 40%;
+        font-size: 3vw;
+        margin-left: 5%;
+    }
+
+    .create-passenger-container .passenger-buttons {
+        width: 60%;
+        margin-right: 20%;
+    }
+
+    .create-passenger-container #submit, .create-passenger-container #reset {
+        font-size: 3vw;
+    }
+}
+
+/*----Add Flight----*/
+.create-flight-container {
+    width: auto;
+    margin: 2% 15%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 15px 40px 30px rgba(0, 0, 0, 0.2), 10px 20px 30px 10px rgba(0, 0, 0, 0.19);
+}
+
+    .create-flight-container .form-group label {
+        width: 21%;
+        padding-top: 2%;
+        padding-left: 5%;
+        margin-left: 3%;
+        font-size: 1.2vw;
+    }
+
+    .create-flight-container .form-group input {
+        width: 20%;
+        font-size: 1.2vw;
+    }
+
+    .create-flight-container #submit, .create-flight-container #reset {
+        width: 45%;
+        font-size: 1.2vw;
+    }
+
+    .create-flight-container .flight-buttons {
+        width: 40%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        float: right;
+    }
+
+@media (max-width: 767px) {
+    .create-flight-container .form-group input {
+        width: 40%;
+        font-size: 3vw;
+    }
+
+    .create-flight-container .form-group label {
+        width: 40%;
+        font-size: 3vw;
+        margin-left: 5%;
+    }
+
+    .create-flight-container .flight-buttons {
+        width: 60%;
+        margin-right: 20%;
+    }
+
+    .create-flight-container #submit, .create-flight-container #reset {
+        font-size: 3vw;
+    }
+}
+
+.flight-info .buttons button {
+    width: 40%;
+}

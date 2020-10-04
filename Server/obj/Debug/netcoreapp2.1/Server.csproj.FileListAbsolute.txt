@@ -1,0 +1,14 @@
+E:\NebbAirline\Server\bin\Debug\netcoreapp2.1\Server.deps.json
+E:\NebbAirline\Server\bin\Debug\netcoreapp2.1\Server.runtimeconfig.json
+E:\NebbAirline\Server\bin\Debug\netcoreapp2.1\Server.runtimeconfig.dev.json
+E:\NebbAirline\Server\bin\Debug\netcoreapp2.1\Server.dll
+E:\NebbAirline\Server\obj\Debug\netcoreapp2.1\Server.csproj.CoreCompileInputs.cache
+E:\NebbAirline\Server\obj\Debug\netcoreapp2.1\Server.RazorAssemblyInfo.cache
+E:\NebbAirline\Server\obj\Debug\netcoreapp2.1\Server.RazorAssemblyInfo.cs
+E:\NebbAirline\Server\obj\Debug\netcoreapp2.1\Server.AssemblyInfoInputs.cache
+E:\NebbAirline\Server\obj\Debug\netcoreapp2.1\Server.AssemblyInfo.cs
+E:\NebbAirline\Server\obj\Debug\netcoreapp2.1\Server.RazorTargetAssemblyInfo.cache
+E:\NebbAirline\Server\bin\Debug\netcoreapp2.1\Server.pdb
+E:\NebbAirline\Server\obj\Debug\netcoreapp2.1\Server.dll
+E:\NebbAirline\Server\obj\Debug\netcoreapp2.1\Server.pdb
+E:\NebbAirline\Server\obj\Debug\netcoreapp2.1\Server.csprojAssemblyReference.cache

@@ -1,0 +1,67 @@
+﻿@inject Client.Services.IDateTimeFormater dateTimeFormatter
+@model Client.ViewModels.FlightInfoViewModel
+@{
+    ViewData["Title"] = "Flight";
+}
+
+@* Flight Information *@
+<div class="page-header">@ViewBag.Message</div>
+<div class="row flight-info">
+    <div class="single-flight-container col-md-12 col-sm-12">
+        <div class="top-look">
+            <div class="display-label">
+                <span class="left-span">@Html.DisplayNameFor(model => model.Origin)</span>
+                <span class="right-span">@Html.DisplayNameFor(model => model.Destination)</span>
+            </div>
+            <div class="display-field">
+                <span class="left-span">@Html.DisplayFor(model => model.Origin)</span>
+                <div class="icon">
+                    <img src="~/images/blue-arrow.png" />
+                </div>
+                <span class="right-span">@Html.DisplayFor(model => model.Destination)</span>
+            </div>
+        </div>
+        <div class="bottom-look">
+            <div class="display-label">
+                <span class="left-span">@Html.DisplayNameFor(model => model.Departure)</span>
+                <span class="right-span">@Html.DisplayNameFor(model => model.FlightCode)</span>
+            </div>
+            <div class="display-field">
+                <span class="left-span date">@dateTimeFormatter.GetFormattedDate(Model.Departure)</span>
+                <span class="right-span">@Html.DisplayNameFor(model => model.FlightCode)</span>
+            </div>
+            <div class="display-field">
+                <span class="left-span">@dateTimeFormatter.GetFormattedTime(Model.Departure)</span>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="edit-ticket" type="button" class="btn btn-success">
+                @Html.ActionLink("Edit", "Edit", "Flight", new { id = Model.FlightID })
+            </button>
+            <button id="delete-ticket" type="button" class="btn btn-danger">
+                @Html.ActionLink("Delete", "ConfirmDelete", "Flight", new { id = Model.FlightID })
+            </button>
+        </div>
+    </div>
+</div>
+
+@* Passenger List *@
+<div class="row passengers">
+    <span>Passengers</span>
+    <div class="col-sm-12 passenger-row">
+        <div class="col-sm-3 col-xs-3">First Name</div>
+        <div class="col-sm-3 col-xs-3">Last Name</div>
+        <div class="col-sm-3 col-xs-3">Passport #</div>
+    </div>
+    @foreach (var item in Model.Passengers)
+    {
+        <div class="col-sm-12 passenger-row">
+            <div class="col-sm-3 col-xs-3">@item.FirstName</div>
+            <div class="col-sm-3 col-xs-3">@item.LastName</div>
+            <div class="col-sm-3 col-xs-3">@item.Passport</div>
+            <div class="col-sm-3 col-xs-3">
+                <button type="button" class="btn btn-primary info-button" onclick="location.href='@Url.Action("PassengerInfo", "Passenger", item)'">Info</button>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,53 @@
+﻿@model Client.Models.Flight
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="page-header">@ViewBag.Message</div>
+<div class="row">
+    <div class="create-flight-container col-xs-12 col-sm-12">
+        <form method="post" enctype="multipart/form-data" asp-action="Create" asp-controller="Flight">
+            <div class="form-header">
+                <img src="~/images/nebb.png" />
+                <span>Nebb Airline Add New Flight</span>
+            </div>
+            <div class="top-info">
+                <div class="form-group">
+                    <label asp-for="Origin"></label>
+                    <input asp-for="Origin" />
+
+                    <label asp-for="Destination"></label>
+                    <input asp-for="Destination" />
+
+                    <div class="validation-container">
+                        <span></span>
+                        <span asp-validation-for="Origin"></span>
+                        <span></span>
+                        <span asp-validation-for="Destination"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="FlightCode"></label>
+                    <input asp-for="FlightCode" />
+
+                    <label asp-for="Departure"></label>
+                    <input step="any" id="departure" asp-for="Departure" />
+
+                    <div class="validation-container">
+                        <span></span>
+                        <span asp-validation-for="FlightCode"></span>
+                        <span></span>
+                        <span asp-validation-for="Departure"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="flight-buttons">
+                <input type="reset" value="Reset" id="reset" class="btn btn-danger" />
+                <input type="submit" value="Add" id="submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+

@@ -1,0 +1,50 @@
+﻿@inject Client.Services.IDateTimeFormater dateTimeFormatter
+@model Client.Models.Flight;
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="page-header">@ViewBag.Message</div>
+<div class="row">
+    <div class="single-flight-container col-md-12 col-sm-12">
+        <div class="top-look">
+            <div class="display-label">
+                <span class="left-span">@Html.DisplayNameFor(model => model.Origin)</span>
+                <span class="right-span">@Html.DisplayNameFor(model => model.Destination)</span>
+            </div>
+            <div class="display-field">
+                <span class="left-span">@Html.DisplayFor(model => model.Origin)</span>
+                <div class="icon">
+                    <img src="~/images/blue-arrow.png" />
+                </div>
+                <span class="right-span">@Html.DisplayFor(model => model.Destination)</span>
+            </div>
+        </div>
+        <div class="bottom-look">
+            <div class="display-label">
+                <span class="left-span">@Html.DisplayNameFor(model => model.Departure)</span>
+                <span class="right-span">@Html.DisplayNameFor(model => model.FlightCode)</span>
+            </div>
+            <div class="display-field">
+                <span class="left-span date">@dateTimeFormatter.GetFormattedDate(Model.Departure)</span>
+                <span class="right-span">@Html.DisplayNameFor(model => model.FlightCode)</span>
+            </div>
+            <div class="display-field">
+                <span class="left-span">@dateTimeFormatter.GetFormattedTime(Model.Departure)</span>
+                <button type="button" class="btn btn-primary info-button">Flight Info</button>
+            </div>
+        </div>
+    </div>
+    <div class="delete-form">
+        <form method="post" enctype="multipart/form-data" asp-action="Delete" asp-controller="Flight">
+            <input type="hidden" asp-for="FlightID" />
+            <input id="yes-delete" class="btn btn-danger" type="submit" value="Yes" />
+            <button id="no-delete" type="button" class="btn btn-success">
+                @Html.ActionLink("No", "FlightInfo", "Flight", Model)
+            </button>
+        </form>
+    </div>
+</div>
+
+

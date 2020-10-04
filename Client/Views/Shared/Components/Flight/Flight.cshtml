@@ -1,0 +1,35 @@
+﻿@inject Client.Services.IDateTimeFormater dateTimeFormatter
+@model Client.Models.Flight
+@{
+    ViewData["Title"] = "Flight Details";
+}
+
+<div class="flight-container col-lg-6 col-md-6 col-sm-12">
+    <div class="top-look">
+        <div class="display-label">
+            <span class="left-span">@Html.DisplayNameFor(model => model.Origin)</span>
+            <span class="right-span">@Html.DisplayNameFor(model => model.Destination)</span>
+        </div>
+        <div class="display-field">
+            <span class="left-span">@Html.DisplayFor(model => model.Origin)</span>
+            <div class="icon">
+                <img src="~/images/blue-arrow.png" />
+            </div>
+            <span class="right-span">@Html.DisplayFor(model => model.Destination)</span>
+        </div>
+    </div>
+    <div class="bottom-look">
+        <div class="display-label">
+            <span class="left-span">@Html.DisplayNameFor(model => model.Departure)</span>
+            <span class="right-span">@Html.DisplayNameFor(model => model.FlightCode)</span>
+        </div>
+        <div class="display-field">
+            <span class="left-span date">@dateTimeFormatter.GetFormattedDate(Model.Departure)</span>
+            <span class="right-span">@Html.DisplayFor(model => model.FlightCode)</span>
+        </div>
+        <div class="display-field">
+            <span class="left-span">@dateTimeFormatter.GetFormattedTime(Model.Departure)</span>
+            <button type="button" class="btn btn-primary info-button" onclick="location.href='@Url.Action("FlightInfo", "Flight", Model)'">Flight Info</button>
+        </div>
+    </div>
+</div>

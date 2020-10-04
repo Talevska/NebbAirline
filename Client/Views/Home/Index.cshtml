@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="index text-center">
+    <span>Welcome to <br /> Nebb Airline Booking System</span>
+    <br />
+    <button id="book-btn" type="button" class="btn btn-warning">
+        @Html.ActionLink("Book Ticket", "Create", "Ticket")
+    </button>
+</div>

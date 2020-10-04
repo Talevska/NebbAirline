@@ -1,0 +1,46 @@
+﻿@inject Client.Services.IDateTimeFormater dateTimeFormatter
+@model Client.ViewModels.PassengerInfoViewModel
+@{
+    ViewData["Title"] = "Passenger";
+}
+
+<div class="page-header">@ViewBag.Message</div>
+
+<div class="row passenger-info-container">
+    <div class="col-sm-12 col-xs-12 col-md-12 first">
+        <span>Passenger Info</span>
+    </div>
+    <div class="col-sm-6 col-xs-6 left-info">
+        <div class="passenger-info">Passenger ID</div>
+        <div class="passenger-info">First Name</div>
+        <div class="passenger-info">Last Name</div>
+        <div class="passenger-info">Date of birth</div>
+        <div class="passenger-info">Passport #</div>
+    </div>
+    <div class="col-sm-6 col-xs-6 right-info">
+        <div class="passenger-info">@Model.PassengerID</div>
+        <div class="passenger-info">@Model.FirstName</div>
+        <div class="passenger-info">@Model.LastName</div>
+        <div class="passenger-info">@Model.DateBirth.Day.@Model.DateBirth.Month.@Model.DateBirth.Year</div>
+        <div class="passenger-info">@Model.Passport</div>
+    </div>
+    <div class="buttons">
+        <button id="edit-ticket" type="button" class="btn btn-success">
+            @Html.ActionLink("Edit", "Edit", "Passenger", new { id = Model.PassengerID })
+        </button>
+        <button id="delete-ticket" type="button" class="btn btn-danger">
+            @Html.ActionLink("Delete", "ConfirmDelete", "Passenger", new { id = Model.PassengerID })
+        </button>
+    </div>
+</div>
+
+<hr />
+<div class="passenger-tickets">Booked Tickets</div>
+
+<div class="row">
+    @foreach (var item in Model.Tickets)
+    {
+        @await Component.InvokeAsync("Ticket", item)
+    }
+</div>
+

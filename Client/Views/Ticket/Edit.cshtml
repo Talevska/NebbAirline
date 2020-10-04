@@ -1,0 +1,116 @@
+﻿@inject Client.Services.IDateTimeFormater dateTimeFormatter
+@model Client.Models.Ticket
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="page-header">@ViewBag.Message</div>
+<div class="row">
+    <div class="create-ticket-container col-xs-12 col-sm-12">
+        <form method="post" enctype="multipart/form-data" asp-action="Edit" asp-controller="Ticket">
+            <div class="form-header">
+                <img src="~/images/nebb.png" />
+                <span>Nebb Airline Booking System</span>
+            </div>
+            <input type="hidden" asp-for="TicketID" />
+            <div class="top-info">
+                <span class="top-span">Passenger Info</span>
+                <div class="form-group">
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName" />
+
+                    <label asp-for="DateBirth"></label>
+                    <input asp-for="DateBirth" />
+
+                    <div class="validation-container">
+                        <span></span>
+                        <span asp-validation-for="FirstName"></span>
+                        <span></span>
+                        <span asp-validation-for="DateBirth"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName" />
+
+                    <label asp-for="Passport"></label>
+                    <input asp-for="Passport" />
+
+                    <div class="validation-container">
+                        <span></span>
+                        <span asp-validation-for="LastName"></span>
+                        <span></span>
+                        <span asp-validation-for="Passport"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-info">
+                <span class="top-span">Flight Info</span>
+                <div class="form-group">
+                    <label asp-for="FlightCode"></label>
+                    <input asp-for="FlightCode" />
+
+                    <div class="validation-container">
+                        <span></span>
+                        <span asp-validation-for="FlightCode"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Origin"></label>
+                    <input asp-for="Origin" />
+
+                    <label asp-for="Destination"></label>
+                    <input asp-for="Destination" />
+
+                    <div class="validation-container">
+                        <span></span>
+                        <span asp-validation-for="Origin"></span>
+                        <span></span>
+                        <span asp-validation-for="Destination"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Departure"></label>
+                    <input asp-for="Departure" />
+
+                    <label asp-for="Return"></label>
+                    <input asp-for="Return" />
+
+                    <div class="validation-container">
+                        <span></span>
+                        <span asp-validation-for="Departure"></span>
+                        <span></span>
+                        <span asp-validation-for="Return"></span>
+                    </div>
+                </div>
+
+                <div class="form-group baggage">
+                    <label asp-for="CarryOnBag"></label>
+                    <input asp-for="CarryOnBag" />
+
+                    <label asp-for="TrolleyBag"></label>
+                    <input asp-for="TrolleyBag" />
+
+                    <label asp-for="CheckedInBag"></label>
+                    <input asp-for="CheckedInBag" />
+
+                    <div class="last-validation-container">
+                        <span asp-validation-for="CarryOnBag"></span>
+                        <span asp-validation-for="TrolleyBag"></span>
+                        <span asp-validation-for="CheckedInBag"></span>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Edit" id="submit" class="btn btn-primary" />
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/ticket-form.js"></script>
+}

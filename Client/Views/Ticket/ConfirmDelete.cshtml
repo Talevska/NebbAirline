@@ -1,0 +1,71 @@
+﻿@inject Client.Services.IDateTimeFormater dateTimeFormatter
+@model Client.Models.Ticket
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="page-header">@ViewBag.Message</div>
+
+<div class="row ticket-info">
+    <div class="ticket-container col-xs-6 col-sm-12">
+        <div class="header">
+            <img src="~/images/nebb.png" />
+            <span>Nebb Airline Ticket</span>
+        </div>
+        <div class="ticket-top-look">
+            <span class="psg-info">Passenger Info</span>
+            <br />
+            <span class="name-for">@Html.DisplayNameFor(model => model.FirstName)</span>
+            <span class="name">@Html.DisplayFor(model => model.FirstName)</span>
+            <span class="name-for">@Html.DisplayNameFor(model => model.DateBirth)</span>
+            <span class="name">@Html.DisplayFor(model => model.DateBirth)</span>
+            <br />
+            <span class="name-for">@Html.DisplayNameFor(model => model.LastName)</span>
+            <span class="name">@Html.DisplayFor(model => model.LastName)</span>
+            <span class="name-for">@Html.DisplayNameFor(model => model.Passport)</span>
+            <span class="name">@Html.DisplayFor(model => model.Passport)</span>
+        </div>
+        <div class="ticket-bottom-look">
+            <span class="flg-info">Flight info</span>
+            <span class="code-name">@Html.DisplayFor(model => model.FlightCode)</span>
+            <span class="code-name-for">@Html.DisplayNameFor(model => model.FlightCode)</span>
+            <br />
+            <span class="name-for">@Html.DisplayNameFor(model => model.Origin)</span>
+            <span class="name">@Html.DisplayFor(model => model.Origin)</span>
+            <span class="name-for">@Html.DisplayNameFor(model => model.Destination)</span>
+            <span class="name">@Html.DisplayFor(model => model.Destination)</span>
+            <br />
+            <span class="name-for">@Html.DisplayNameFor(model => model.Departure)</span>
+            <span class="name-dep-ret">@dateTimeFormatter.GetFormattedDate(Model.Departure) @dateTimeFormatter.GetFormattedTime(Model.Departure)</span>
+            <br />
+
+            @{
+                if (Model.Return.HasValue)
+                {
+                    DateTime date = Model.Return.Value;
+                    <span class="name-for">@Html.DisplayNameFor(model => model.Return)</span>
+                    <span class="name-dep-ret">@dateTimeFormatter.GetFormattedDate(date) @dateTimeFormatter.GetFormattedTime(date)</span>
+                }
+            }
+
+            <br />
+            <span class="bags-name-for">@Html.DisplayNameFor(model => model.CarryOnBag)</span>
+            <span class="bags-name">@Html.DisplayFor(model => model.CarryOnBag)</span>
+            <span class="bags-name-for">@Html.DisplayNameFor(model => model.TrolleyBag)</span>
+            <span class="bags-name">@Html.DisplayFor(model => model.TrolleyBag)</span>
+            <span class="bags-name-for">@Html.DisplayNameFor(model => model.CheckedInBag)</span>
+            <span class="bags-name">@Html.DisplayFor(model => model.CheckedInBag)</span>
+        </div>
+
+        <div class="delete-form">
+            <form method="post" enctype="multipart/form-data" asp-action="Delete" asp-controller="Ticket">
+                <input type="hidden" asp-for="TicketID" />
+                <input id="yes-delete" class="btn btn-danger" type="submit" value="Yes" />
+                <button id="no-delete" type="button" class="btn btn-success">
+                    @Html.ActionLink("No", "TicketInfo", "Ticket", Model)
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
