@@ -120,6 +120,14 @@ namespace Server.Controllers
                 return BadRequest();
             }
 
+            // Format First letters to Uppercase and Flight Code letters to Uppercase
+            ticket.FirstName = FormatLetters.FirstCharToUpper(ticket.FirstName);
+            ticket.LastName = FormatLetters.FirstCharToUpper(ticket.LastName);
+            ticket.Passport = FormatLetters.FirstCharToUpper(ticket.Passport);
+            ticket.FlightCode = FormatLetters.CodeCharsToUpper(ticket.FlightCode);
+            ticket.Origin = FormatLetters.FirstCharToUpper(ticket.Origin);
+            ticket.Destination = FormatLetters.FirstCharToUpper(ticket.Destination);
+
             try
             {
                 await _repository.UpdateTicket(ticket);
