@@ -11,16 +11,10 @@ using Server.Services;
 
 namespace Server.Controllers
 {
-    /// <summary>
-    /// Controller for Flight.
-    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class FlightController : ControllerBase
     {
-        /// <summary>
-        /// The IRepository object.
-        /// </summary>
         IRepository _repository;
         public FlightController(IRepository repository)
         {
