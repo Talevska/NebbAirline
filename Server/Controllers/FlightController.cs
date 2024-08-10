@@ -23,7 +23,7 @@ namespace Server.Controllers
 
         // GET: api/Flight
         [HttpGet]
-        public ActionResult<List<Flight>> Get()
+        public ActionResult<List<Flight>> GetAll()
         {
             return _repository.GetFlights().ToList();
         }
