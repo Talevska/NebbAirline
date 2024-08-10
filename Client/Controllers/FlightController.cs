@@ -21,7 +21,7 @@ namespace Client.Controllers
         }
 
         // GET: Flight
-        public async Task<ActionResult> DisplayAllFlights()
+        public async Task<ActionResult> DisplayAll()
         {
             HttpClient httpClient = _httpClientFactory.CreateClient();
             httpClient.BaseAddress = new Uri("http://localhost:64794");
