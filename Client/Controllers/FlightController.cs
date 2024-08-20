@@ -23,20 +23,7 @@ namespace Client.Controllers
         // GET: Flight
         public async Task<ActionResult> DisplayAllFlights()
         {
-            HttpClient httpClient = _httpClientFactory.CreateClient();
-            httpClient.BaseAddress = new Uri("http://localhost:64794");
-            HttpResponseMessage response = await httpClient.GetAsync("api/flight");
-            if (response.IsSuccessStatusCode)
-            {
-                IEnumerable<Flight> flights = await response.Content.ReadAsAsync<IEnumerable<Flight>>();
-                ViewBag.Message = "All Flights";
-                return View(flights);
-            }
-            else
-            {
-                ViewBag.Message = "Error while loading flights. Please try again.";
-                return View("CustomError");
-            }
+            
         }
 
         // GET: Flight/FlightInfo
