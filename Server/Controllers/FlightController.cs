@@ -28,13 +28,6 @@ namespace Server.Controllers
             return _repository.GetFlights().ToList();
         }
 
-        // GET: api/Flight
-        [HttpGet]
-        public ActionResult<List<Flight>> GetAll()
-        {
-            return _repository.GetFlights().ToList();
-        }
-
         // GET: api/Flight/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
