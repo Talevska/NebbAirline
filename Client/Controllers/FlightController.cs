@@ -15,7 +15,10 @@ namespace Client.Controllers
     {
         private IHttpClientFactory _httpClientFactory;
 
-
+        public FlightController(IHttpClientFactory httpClientFactory)
+        {
+            _httpClientFactory = httpClientFactory;
+        }
 
         // GET: Flight
         public async Task<ActionResult> DisplayAllFlights()
